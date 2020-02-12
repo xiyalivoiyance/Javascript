@@ -1,0 +1,358 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+	
+<link href="style.css" rel="stylesheet">
+	
+	
+</head>
+
+<body>
+	
+<form method="post">
+	
+	<ol>
+		<!--1-->
+		
+		
+	<li>
+		<label for="email">Email:</label>
+	<input type="email" name="email" value="email">
+		</li>
+		
+		
+		<!--2-->
+		
+		
+	<li>
+		<label for="tel">Telephone:</label>
+	<input type="tel" name="tel" value="tel">
+		</li>
+		
+		
+		<!--3-->
+		
+		<li>
+			<label for="age">Age (Enter a number): </label>
+	<input type="number" name="age" id="age" min="1" max="10" step="2">
+		</li>
+		
+		
+		
+		<!--4-->
+		
+		<li>
+			<label for="soymilk">How much soymilk did you drink today?</label>
+	<input type="range" name="soymilk" id="soymilk" min="0" max="500" step="2">
+	<output class="soymilkcount"></output>
+	<select>
+		<optgroup label="Metric">
+		<option>ml</option>
+		</optgroup>
+		
+		
+		<optgroup label="U.S. unit">
+		<option>oz</option>
+		</optgroup>
+		
+	</select>
+		</li>
+		
+		
+		<!--5-->
+		
+		
+		
+		
+		<li>
+			
+			<label for="datetimelocal">Date-time Local: </label>
+			<input type="datetime-local">
+		
+		</li>
+		
+		
+		
+		
+		<!--6-->
+		
+		
+		<li><input type="date"  min="2013-06-01" max="2013-08-31" step="3" name="date" id="date"></li>
+		
+		<!--7-->
+		
+		
+		<li>	
+			<input type="month" name="month" id="month">
+</li>
+		
+		<!--8-->
+		
+		
+		
+		
+		<li>	
+			<input type="time" name="time" id="time">
+</li>
+		
+		
+		<!--9-->
+		
+		
+		
+		<li>	
+			<input type="week" name="week" id="week">
+</li>
+		
+		
+		<!--10-->
+		
+		
+		
+		<li>
+			<input type="color" name="color" id="color" value="#7FA1AE">
+	<output id="colorvalue"></output>
+		
+		</li>
+		
+		
+		
+		<!--11-->
+		
+		
+		
+		<li>
+			<label for="weather">Today's weather</label>
+	<textarea cols="60" rows="7"></textarea>
+			
+	</li>
+		
+		
+		<!--12-->
+		
+		
+		<li>
+		
+		
+		<label for="myFruit">What's your favorite fruit?</label>
+<input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+<datalist id="mySuggestion">
+  <option>Apple</option>
+  <option>Banana</option>
+  <option>Blackberry</option>
+  <option>Blueberry</option>
+  <option>Lemon</option>
+  <option>Lychee</option>
+  <option>Peach</option>
+  <option>Pear</option>
+</datalist>
+		
+		
+		
+		</li>
+		
+		<!--13-->
+		
+		
+		<li>
+			<progress id="added" max="100" value="50"></progress>
+		<output id="progress"></output>
+		
+		</li>
+		
+		
+		<!--14-->
+		
+		
+		<li>
+		
+		<meter min="0" max="200" low="66" high="132" value="150" optimum="200"></meter>
+		
+		</li>
+		
+		
+		<!--15-->
+		
+		
+		
+		<li>
+		<fieldset>
+  <legend>Which colors do you like?</legend>
+  <ul>
+    <li>
+      <input type="checkbox" name="color" value="red" required id="red1">
+      <label for="red1">Red</label>
+    </li>
+    <li>
+      <input type="checkbox" name="color" value="green" id="green1">
+      <label for="green1">Green</label>
+    </li>
+    <li>
+      <input type="checkbox" name="color" value="blue" id="blue1">
+      <label for="blue1">Blue</label>
+    </li>
+  </ul>
+</fieldset>
+
+<fieldset>
+  <legend>Which is your favorite?</legend>
+  <ul>
+    <li>
+      <input type="radio" name="color" value="red" required id="red2">
+      <label for="red2">Red</label>
+    </li>
+    <li>
+      <input type="radio" name="color" value="green" id="green2">
+      <label for="green2">Green</label>
+    </li>
+    <li>
+      <input type="radio" name="color" value="blue" id="blue2">
+      <label for="blue2">Blue</label>
+    </li>
+  </ul>
+</fieldset>
+			
+			</li>
+		
+		<!--16-->
+		
+		
+		<li>
+		
+		
+		<form action="#">
+  <fieldset id="shipping">
+    <legend>Shipping address</legend>
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Address">
+    <input type="text" placeholder="Zip Code">
+  </fieldset>
+  <br>
+  <fieldset id="billing">
+    <legend>Billing address</legend>
+    <label for="billing-checkbox">Same as shipping address:</label>
+    <input type="checkbox" id="billing-checkbox" checked>
+    <br>
+    <input type="text" placeholder="Name" disabled>
+    <input type="text" placeholder="Address" disabled>
+    <input type="text" placeholder="Zip Code" disabled>
+  </fieldset>
+</form>
+		
+		</li>
+		
+		<!--17-->
+		
+		
+		<li>
+		
+		<div>
+  <input type="checkbox" id="checkbox1">
+  <label for="checkbox1">This checkbox is checked by default. I am always italic.</label>
+</div>
+<div>
+  <input type="checkbox" id="checkbox2" checked>
+  <label for="checkbox2" checked><strong>This checkbox needs to be checked. I am never italic.</strong></label>
+</div>
+<div> 
+  <label for="progress1"><strong>This progress has no value</strong></label> 
+	<progress id="progress1" value="3"></progress>
+</div>
+<div>
+  <label for="progress2"><strong>This progress has a value</strong></label>
+  <progress id="progress2" ></progress>
+</div>
+		
+		</li>
+		
+		
+		<!--18-->
+		
+		
+		<li>
+		
+			<input type="search">
+		
+		</li>
+		
+		
+		
+	
+		
+		
+		
+		
+		
+	</ol>
+	
+
+		<button>Send</button>
+
+	
+	</form>
+	
+	
+	
+	
+	
+</body>
+	
+	
+	<script>
+		
+		let soymilk = document.querySelector('#soymilk')
+let count = document.querySelector('.soymilkcount')
+
+let  colorpicked = document.querySelector('#color')
+let colorcode = document.querySelector('#colorvalue')
+
+let added = document.querySelector('#added')
+let progress = document.querySelector('#progress')
+
+progress.textContent = added.value
+
+count.textContent = soymilk.value
+
+soymilk.oninput = function() {
+  count.textContent = soymilk.value
+}
+
+colorcode.textContent = colorpicked.value
+colorpicked.oninput = function() {
+	colorcode.textContent = colorpicked.value
+}
+	
+
+
+//16
+
+
+// Wait for the page to finish loading
+document.addEventListener('DOMContentLoaded', function () {
+  // Attach `change` event listener to checkbox
+  document.getElementById('billing-checkbox').onchange = toggleBilling;
+}, false);
+
+function toggleBilling() {
+  // Select the billing text fields
+  var billingItems = document.querySelectorAll('#billing input[type="text"]');
+
+  // Toggle the billing text fields
+  for (var i = 0; i < billingItems.length; i++) {
+    billingItems[i].disabled = !billingItems[i].disabled;
+  }
+}
+
+
+		//17
+		
+		document.getElementsById("checkbox1").indeterminate = false;
+
+
+	
+	</script>
+	
+	
+</html>

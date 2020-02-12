@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  <link href="StyleSheet.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    
+	  
+	  <button id="add">+ </button>
+	  
+	    <form method="get">
+		  
+	<ol>
+		<li>
+			<label  for="firstName">First name: </label>
+			<input type="text" name="firstName" id="#firstName">
+		</li>
+		
+		<li>
+			<label for="lastName">Last name: </label>
+			<input type="text" name="lastName" id="#lastName">
+		</li>
+		
+		<li>
+			<label for="age">Age: </label>
+			<input type="number" name="age" id="#age" step="1">
+		</li>
+		
+		
+		
+		<li>
+			<label for="gender">Gender: </label>
+			<input type="text" name="gender" id="#gender">
+		</li>
+		
+		
+		
+		<li id="listOfInterests">
+			<label for="interest">Interest(s): </label>
+			<input type="text" name="interest" class="interests">
+			
+		</li>
+		
+		<li>
+	  	  <button id="generateBio" type="submit">Generate Bio</button>
+		</li>
+		
+	</ol>
+	  
+	  
+	  </form>
+	  
+	  
+	  
+	   <output id="Bio"></output>
+	  
+	  
+	  
+	  
+	  
+
+  </body>
+
+    <script>
+		
+		
+		
+		//add input window
+		
+		let addInput = document.querySelector('#add');
+		let interestList = document.querySelector('#listOfInterests');
+		
+		addInput.onclick = function(){
+			
+		 var newInput =	document.createElement('input');
+			
+			newInput.setAttribute('type', 'text');
+			newInput.setAttribute('class', 'interests');
+			interestList.appendChild(newInput);
+			
+		} 
+		
+		
+		
+		
+		
+		
+	
+		//person object
+		
+	function Person(first, last, age, gender, interests) {
+  this.name = {
+     first : first,
+     last : last
+  };
+  this.age = age;
+  this.gender = gender;
+  this.interests = interests;
+  this.bio = function() {
+	  
+	  let biomsg = this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. ';
+	  
+//	   this.interests[0] + ' and ' + this.interests[1] + '.'
+	  
+	  if (gender === 'male'){
+		  
+		  biomsg += 'He likes ';
+		  
+	  } else {
+		  
+		  biomsg += 'She likes ';
+		  
+	  }
+	  
+	  for (let i = 0; i < interests.length; i++){
+		  
+		  if (interests.length === 1){
+			  
+			  biomsg += interests[0] + '.';
+			  break;
+			  
+			  } else if (interests.length === 2){
+			  
+			  biomsg += interests[0] + ' and ' + interests[1] + '.';
+			  break;
+			  
+		  } 
+			  else if (i !== interests.length - 1){
+			  
+			  biomsg += interests[i] + ', ';
+			  
+		  } else {
+			  
+			  biomsg += 'and ' + interests[i] + '.';
+			  
+		  }
+		  
+	  }
+	  
+	  
+	  
+    alert(biomsg);
+	  
+  };
+		
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name.first + '.');
+  };
+}
+		
+		
+		
+		//create profile from input
+		
+		
+		
+		let generateBio = document.querySelector('#generateBio');
+		
+		
+		generateBio.onclick = function(){
+			
+			var profile = document.querySelectorAll('input');
+			var interests = [];
+			
+			
+			for (i = 4; i < profile.length; i++){
+				
+				interests.push(profile[i].value);
+			}
+			
+			var newPerson = new Person(profile[0].value, profile[1].value, profile[2].value, profile[3].value, interests);
+			
+			newPerson.bio();
+			
+		}
+		
+		
+		
+		
+    </script>
+</html>

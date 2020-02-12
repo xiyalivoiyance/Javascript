@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Scrolling</title>
+</head>
+
+<body>
+	
+	<h1 class="title">Crocodile</h1>
+	<nav class="category">
+	<ul>
+		 <li>Habitat</li>
+		<li>Diet</li>
+		<li>Reproduction</li>
+	</ul>
+	</nav>
+	
+</body>
+	<style>
+		h1 {
+			color: bisque;
+		}
+		nav {
+			color: bisque;
+		}
+	</style>
+	<script>
+		var navigation = document.querySlector('title')
+		
+		function setColor(variable) {
+			variable.style.color = 'black';
+		}
+		
+		navigation.addEventListener('pointerenter', setColor(navigation));
+		
+	</script>
+</html>

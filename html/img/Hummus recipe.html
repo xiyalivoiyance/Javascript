@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quick hummus recipe</title>
+	  
+	  
+	  
+	  <style>
+	  
+		  picture{
+			  visibility: visible;
+		  }
+	  
+	  </style>
+	  
+	  
+	  
+  </head>
+	
+	
+	
+	
+  <body>
+	  
+	  
+	
+	<main>
+		
+	
+		
+	 <picture class = "pics">
+          <source media="(max-width: 799px)" srcset="How-to-Make-Homemade-Hummus-1200.jpg" width="500px" height="auto">
+          <img src="easy-hummus-horiz-a-1800.jpg" alt="Chris standing up holding his daughter Elva" width="500px" height="auto">
+        </picture>
+		
+	<output></output>
+		
+		
+	<div>
+		
+		 <h1>Quick hummus recipe</h1>
+
+    <p>This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>
+
+   <p> <a href="https://en.wikipedia.org/wiki/Hummus" title="Wikipedia"><strong>Hummus</strong></a> is a delicious thick paste used heavily in <em>Greek</em> and <em>Middle Eastern</em> dishes. It is very tasty with salad, grilled meats and pitta breads.</p>
+
+		</div>
+	  
+   
+    <h2>Ingredients</h2>
+
+	<ul>
+    <li>1 can (400g) of chick peas (garbanzo beans)</li>
+    <li>175g of tahini</li>
+    <li>6 sundried tomatoes</li>
+    <li>Half a red pepper</li>
+    <li>A pinch of cayenne pepper</li>
+    <li>1 clove of garlic</li>
+    <li>A dash of olive oil</li>
+	</ul>
+
+    <h2>Instructions</h2>
+
+	<ol>
+    <li>Remove the skin from the garlic, and chop coarsely</li>
+    <li>Remove all the seeds and stalk from the pepper, and chop coarsely</li>
+    <li>Add all the ingredients into a food processor</li>
+    <li>Process all the ingredients into a paste.</li>
+		<ul>
+    	<li>If you want a coarse "chunky" hummus, process it for a short time</li>
+    	<li>If you want a smooth hummus, process it for a longer time</li>
+		</ul>
+	</ol>
+
+	  
+    <p1>For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p1>
+
+    <h2>Storage</h2>
+
+    <p>Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.</p>
+
+    <p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>
+
+		
+    </main>
+
+  </body>
+	
+	<script>
+	
+			let pic = document.querySelector('.pics');
+		
+			let out = document.querySelector('h1');
+		
+			out.textContent = document.body.clientWidth || document.documentElement.clientWidth;
+		
+			const screenSize = document.body.clientWidth || document.documentElement.clientWidth;
+		
+		
+			function checkScreenSize (){
+	
+	if( screenSize < 600 ){
+		
+			
+			pic.style.visibility = "hidden";
+		
+		
+	} 
+	
+}
+
+		checkScreenSize();
+			
+	
+	</script>
+	
+	
+</html>

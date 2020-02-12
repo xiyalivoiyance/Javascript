@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mapquest example</title>
+    <style>
+      #map {
+        width: 600px;
+        height: 600px;
+      }
+    </style>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+    <script>
+      // 1. The basic part of the example
+      var L;
+
+      window.onload = function() {
+        L.mapquest.key = 'RfNTaawLgtvtb6ClK3t1pmAgwlhV5ZAl';
+
+        // 'map' refers to a <div> element with the ID map
+        var map = L.mapquest.map('map', {
+          center: [53.480759, -2.242631],
+          layers: L.mapquest.tileLayer('map'),
+          zoom: 12,
+		  maxZoom: 13,
+		 
+			
+        });
+		  
+		  
+		  
+		  
+		map.addControl(L.mapquest.control({
+  position: 'topright'
+}));
+		  
+		  
+		  
+		map.addControl(L.mapquest.trafficControl({
+  className: '',
+  colors: {
+    low: '#1ca747',
+    medium: '#feeb41',
+    high: '#df0021',
+    closed: '#0c0000'
+  },
+  construction: true,
+  flow: true,
+  incidents: true,
+  position: 'topright',
+  markets: true,
+  title: 'Traffic'
+}));
+		  
+		  
+
+		  
+		  
+
+		 L.mapquest.search().place({
+  q: 'hotels',
+  sort: 'relevance'
+}, createBasicSearchLayer);
+
+function createBasicSearchLayer(err, response) {
+  map.addLayer(L.mapquest.searchLayer({
+    searchResponse: response
+  }));
+	
+
+	
+	
+}
+		  
+		  
+
+		  
+		  
+		  
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Simple Mapquest example</h1>
+
+    <div id="map"></div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Different Events</title>
+	
+	
+	<link href="ChangeColor.css" rel="stylesheet">
+	
+	
+</head>
+
+<body>
+	
+<!--	<h1>1</h1>-->
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	
+</body>
+	
+	
+	<script>
+	
+	let box = document.querySelectorAll('div');
+//	let position = document.querySelector('h1');
+		
+	function changeColor(num){
+		
+		box[num].style.backgroundColor = '#00CCFF';
+		
+	}
+		
+	function changeBack(num){
+		
+		box[num].style.backgroundColor = '#F0FCFF';
+		
+	}
+		
+	document.onscroll = function(){
+		
+//		position.textContent = document.documentElement.scrollTop;
+		
+		var pos = document.documentElement.scrollTop / 210 ;
+		
+		if( pos > 0){
+			
+			changeColor((pos - pos%1) + 2);
+		changeBack((pos - pos%1) + 1);
+		changeBack((pos - pos%1) + 3);
+			
+		}
+		
+		
+		
+	}
+	
+	
+		
+	
+	</script>
+	
+	
+</html>

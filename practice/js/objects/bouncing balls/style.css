@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body {
+  margin: 0;
+}
+
+html {
+  font-family: "Libre Baskerville Bold", Ovo, "Ibarra Real Nova Bold", "serif";
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: inherit;
+}
+
+h1 {
+  font-size: 20rem;
+  letter-spacing: -1px;
+  color: peachpuff;
+  position: absolute;
+  margin: 0;
+  top: 190px;
+  right: 550px;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  color: lightslategrey;
+  position: absolute;
+  margin: 0;
+  top: 550px;
+  right: 440px;
+}

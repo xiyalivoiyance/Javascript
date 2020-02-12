@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#add{
+	
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	margin-left: 47%;
+	margin-top: 12%;
+}
+
+input{
+	margin-top: 20px;
+}
+
+label{
+	margin-top: 20px;
+}
+
+#generateBio{
+	margin-top: 20px;
+}
+
+form{
+	
+	
+	margin-left: 30%;
+	width: 17%;
+	
+	
+}
+
+

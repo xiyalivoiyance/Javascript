@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Change Position</title>
+	
+	<link href="ChangePosition.css" rel="stylesheet">
+	
+	
+</head>
+
+<body>
+
+	
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+
+	<h1>Happy <br>Year<br> 2020</h1>
+
+	
+</body>
+	
+	
+	
+	<script>
+	
+	let box1 = document.querySelector('#div1');
+	let box2 = document.querySelector('#div2');
+	let box3 = document.querySelector('#div3');
+	let newYear = document.querySelector('h1');
+		
+	document.onscroll = function(){
+		
+		let position = document.documentElement.scrollTop;
+		
+		if(position < 4000){
+			
+			
+			box1.style.marginLeft = 700 - Math.sin(position/100) * 90 + 'px';
+			box1.style.marginTop = 400 + position - Math.cos(position/100) * 90 + 'px';
+			
+			
+			box2.style.marginLeft = 700 - Math.sin(position/100) * 300 + 'px';
+			box2.style.marginTop = 470 + position - Math.cos(position/100) * 300 + 'px';
+			
+			box3.style.marginLeft = 700 - Math.sin(position/100) * 500 + 'px';
+			box3.style.marginTop = 550 + position - Math.cos(position/100) * 500 + 'px';
+			
+		}
+		
+		if(Math.sin(position/100) > 0){
+			
+			newYear.style.color = "#DEF1FF";
+			
+		} else {
+			newYear.style.color = "coral";
+		}
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	</script>
+	
+	
+	
+</html>

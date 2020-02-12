@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	
+	<button>click you</button>
+	<p>You are here.</p>
+	
+	
+	
+</body>
+	
+	<script>
+	
+		const btn = document.querySelector('button');
+		const txt = document.querySelector('p');
+		
+		btn.addEventListener('click', updateBtn);
+		
+		function updateBtn() {
+			if (btn.textContent === 'click you'){
+				
+				btn.textContent = 'click me';
+				txt.textContent = 'I am gone';
+				
+			} else {
+				
+				btn.textContent = 'click you';
+				txt.textContent = 'You are here.';
+			}
+		}
+	
+	</script>
+	
+</html>
+
+

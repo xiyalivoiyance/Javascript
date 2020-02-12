@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Different Events</title>
+	
+	
+	<link href="ChangeSize.css" rel="stylesheet">
+	
+	
+</head>
+
+<body>
+	
+<!--	<h1>1</h1>-->
+	
+	
+	
+	
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	
+	
+		<footer></footer>
+
+
+	
+</body>
+	
+	
+	<script>
+	
+	let box = document.querySelectorAll('div');
+//	let position = document.querySelector('h1');
+		
+		
+	
+	function changeSize(num){
+		
+		box[num].style.width = "20px";
+		box[num].style.borderRadius = "30px";
+		box[num].style.marginLeft = "700px";
+		box[num].style.backgroundColor = "olive";
+		
+	}
+		
+	function changeBack(num){
+		
+		box[num].style.width = "1200px";
+		box[num].style.borderRadius = "0px";
+		box[num].style.marginLeft = "100px";
+	}
+		
+	document.onscroll = function(){
+		
+//		position.textContent = document.documentElement.scrollTop;
+		
+		var pos = document.documentElement.scrollTop / 20 ;
+		
+		if( pos > 0){
+			
+			
+			changeSize((pos - pos%1) + 17);
+		changeBack((pos - pos%1)+16);
+		changeBack((pos - pos%1) + 18);
+			
+		}
+		
+		
+		
+	}
+	
+	
+		
+	
+	</script>
+	
+	
+</html>

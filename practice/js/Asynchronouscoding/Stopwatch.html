@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple setInterval clock</title>
+    <style>
+      p {
+		position: absolute;
+        font-family: "Lora Bold", "serif";
+		color: cornflowerblue;
+		font-size: 200px;
+		left: 365px;
+		top: 80px;
+      }
+		
+		
+	  #start{
+		font-family: "Lora Bold", "serif";
+		color:cornflowerblue;
+		border-width: 0;
+		width: 100px;
+		height: 30px;
+		font-size: 30px;
+		font-weight: 800;
+		text-align: left;
+		margin-left: 1100px;
+		margin-top: 550px;
+		}
+	
+	
+	 #end{
+		font-family: "Lora Bold", "serif";
+		color:cornflowerblue;
+		border-width: 0;
+		font-weight: 800;
+		width: 100px;
+		height: 30px;
+		font-size: 30px;
+		text-align: left;
+		margin-left: 1100px;
+		margin-top: 10px;
+		}
+		
+		
+    </style>
+  </head>
+  <body>
+    
+	<button id="start"><u>START</u></button>
+	<button id="end"><u>END</u></button>
+	<p class="clock"></p> 
+	  
+    <script>
+		
+		let start = document.querySelector('#start');
+		let end = document.querySelector('#end');
+		let clock = document.querySelector('.clock');
+		
+		end.disabled = true;
+		clock.textContent = '00:00:00';
+      
+		//Stopwatch
+		
+		let sec = 0
+		let min = 0;
+		let hr = 0;
+		let currentTime = 0;
+		
+			//display
+			
+		function displayTime (second, minute, hour){
+			let zero = '0';
+			let time = '';
+			
+			if (hour < 10){
+				time += (zero + hour + ':');
+			} else {
+				time += (hour + ':');
+			}
+			
+			if (minute < 10){
+				time += (zero + minute + ':');
+			} else {
+				time += (minute + ':');
+			}
+			
+			if (second < 10){
+				time += (zero.toString() + second.toString());
+			} else {
+				time += (second.toString());
+			}
+			
+			clock.textContent = time;
+		};
+		
+			//record
+		
+		function recordTime(){
+			let record = 0;
+			let timePassed = Date.now() - currentTime;
+			hr = Math.floor(timePassed / 3600000);
+			timePassed -= (hr * 3600000);
+			min = Math.floor(timePassed / 60000);
+			timePassed -= (min * 60000);
+			sec = Math.floor(timePassed/1000);
+			
+			displayTime(sec, min, hr);
+		}
+		
+		
+		//press the start button
+		
+			let startRecord;
+		
+			start.onclick = function(){
+				currentTime = Date.now();
+				startRecord = setInterval(recordTime, 1000);
+				start.disabled = true;
+				end.disabled = false;
+			}
+		
+		
+		//press the end button
+			end.onclick = function(){
+				clearInterval(startRecord);
+				start.disabled = false;
+				end.disabled = true;
+			}
+		
+		
+    </script>
+  </body>
+</html>
