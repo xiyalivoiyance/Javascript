@@ -1,5 +1,8 @@
 // setup canvas
 
+ 
+
+
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -47,6 +50,7 @@ Ball.prototype.draw = function() {
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.fill();
+  console.log('Ball.draw');
 }
 
 
@@ -74,6 +78,7 @@ Ball.prototype.update = function() {
   this.x += this.velX;
   this.y += this.velY;
 
+  console.log('Ball.update');
 	
 }
 
@@ -91,6 +96,9 @@ Ball.prototype.collisionDetect = function() {
       }
     }
   }
+	
+	console.log('Ball.collisionDetect');
+	
 }
 
 //generate balls
@@ -211,16 +219,21 @@ eater.setControls();
 
 
 
-
+console.log('number of balls: ' + balls.length);
 
 
 
 function loop() {
   ctx.fillStyle = 'rgba(225, 225, 225, 0.3)';
   ctx.fillRect(0, 0, width, height);
+	
+	
+			
+	
 
   for (let i = 0; i < balls.length; i++) {
 	if(balls[i].exists){
+	console.log('balls' + i + balls[i]);
 	balls[i].draw();
     balls[i].update();
 	balls[i].collisionDetect();	
@@ -230,7 +243,10 @@ function loop() {
 	eater.collisionDetect();
   }
 
-  requestAnimationFrame(loop);
+				requestAnimationFrame(loop);
+	
+	
+  
 }
 
 

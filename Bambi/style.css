@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	background-color: #F4D9D9;
+	margin: 0px;
+}
+
+a{
+	color: #F7A761;
+	text-decoration: none;
+}
+
+html{
+	overflow: hidden;
+	margin: 0px;
+	margin-left: 0px;
+}
+
+#bar{
+	
+				position: absolute;
+				width: 50px;
+				height: 20px;
+				border-radius: 20px;
+				background-color: #D09292;
+				margin-left: 300px;
+				margin-top: -200px;
+				
+			}
+
+#line{
+	position: absolute;
+				width: 70px;
+				height: 5px;
+				border-radius: 20px;
+				background-color: #F7A761;
+				margin-left: 292.5px;
+				margin-top: -650px;
+}
+
+
+h1{
+	position: absolute;
+	margin-top: -95px;
+	margin-left: 280px;
+	color: #F7A761;
+    font-family: Helvetica Neue Bold, sans-serif;}
+
+h2{
+	position: absolute;
+	font-size: 38px;
+	margin-top: -640px;
+	margin-left: 39px;
+	color: #F7A761;
+	font-family: Helvetica, sans-serif;
+}
+
+#bestscore{
+	color: #F7A761;
+	font-family: Helvetica, sans-serif;
+	font-size: 9px;
+	position: absolute;
+	margin-left: 34.5px;;
+	margin-top: -650px;
+}
+
+#current{
+	color: #F7A761;
+	font-family: Helvetica, sans-serif;
+	font-size: 38px;
+	position: absolute;
+	margin-left: 295px;
+	margin-top: -640px;
+}
+
+
+#playStop{
+	position: absolute;
+	margin-top: 0px;
+	margin-left: 0px;
+	width: 30px;
+	height: auto;
+}
+
+#finalScore{
+	color: #F7A761;
+	font-family: Helvetica, sans-serif;
+	font-size: 100px;
+	margin-left: 20px;
+	margin-top: 140px;
+}
+
+#congrad{
+	position: absolute;
+	margin-top: -550px;
+	display: flex;
+	justify-content: center;
+}
+
+#transparent{
+	position: absolute;
+	margin-top: 0;
+	overflow: hidden;
+}
+
+#base{
+	margin-left: 33px;
+}
+
+#sugar{
+	position: absolute;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+#back{
+	margin-left: -70px;
+	margin-top: 351px;
+}
+
+#again{
+	margin-left: 100px;
+	margin-top: 350px;
+}

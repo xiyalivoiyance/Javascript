@@ -1,0 +1,547 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Drag + Drop</title>
+	
+	<style>
+		
+		#board{
+			
+			margin-top: 200px;
+			margin-left: 400px;
+			background-color: antiquewhite;
+			width: 500px;
+			height: 500px;
+			border-radius: 30px;
+		}
+		
+		
+		div{
+			width: 30px;
+			height: 30px;
+		}
+	
+		#player{
+			width: 30px;
+			height: 30px;
+			border-radius: 30px;
+			
+			background-color: #FADB35;
+		}
+		
+		h2{
+			margin-left: 100px;
+			margin-top: 300px;
+			color: peru;
+			font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+		}
+		
+		h1{
+			margin-left: 220px;
+			margin-top: -49px;
+			color: peru;
+			font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+		}
+		
+		.Path{
+			
+			background-color: burlywood;
+			
+		}
+		
+		#path1{
+	margin-bottom: 30px;
+	margin-top: 121px;
+			margin-left: 100px;
+			background-color: antiquewhite;
+		}
+		
+		#path2{
+			margin-left: 100px;
+			margin-top: 100px;
+			border-top-left-radius: 30px;
+			border-top-right-radius: 30px;
+		}
+		
+		#path3{
+			margin-left: 100px;
+			margin-top: 0px;
+		}
+	
+		#path4{
+			margin-left: 100px;
+			margin-top: 0px;
+		}
+		
+		#path5{
+			margin-left: 130px;
+			margin-top: -30px;
+		}
+		
+		#path6{
+			margin-left: 160px;
+			margin-top: -30px;
+		}
+		
+		#path7{
+			margin-left: 100px;
+			margin-top: 0px;
+		}
+		
+		#path8{
+			margin-left: 100px;
+			margin-top: 0px;
+		}
+	
+		#path9{
+			margin-left: 130px;
+			margin-top: -30px;
+		}
+		
+		#path10{
+			margin-left: 130px;
+			margin-top: 0px;
+		}
+		
+		#path11{
+			margin-left: 130px;
+			margin-top: 0px;
+		}
+		
+		#path12{
+			margin-left: 160px;
+			margin-top: -30px;
+		}
+		
+		#path13{
+			margin-left: 190px;
+			margin-top: -30px;
+		}
+		
+		#path14{
+			margin-left: 190px;
+			margin-top: -60px;
+		}
+		
+		#path15{
+			margin-left: 190px;
+			margin-top: -60px;
+		}
+		
+		#path16{
+			margin-left: 220px;
+			margin-top: 30px;
+		}
+		
+		
+	    #path17{
+			margin-left: 220px;
+			margin-top: -90px;
+		}
+		
+		#path18{
+			margin-left: 250px;
+			margin-top: -30px;
+		}
+		
+		#path19{
+			margin-left: 280px;
+			margin-top: -30px;
+		}
+		
+		#path20{
+			margin-left: 280px;
+			margin-top: -60px;
+		}
+		
+		#path21{
+			margin-left: 280px;
+			margin-top: -60px;
+		}
+		
+		#path22{
+			margin-left: 250px;
+			margin-top: -30px;
+		}
+		
+		#path23{
+			margin-left: 220px;
+			margin-top: -30px;
+		}
+		
+		#path24{
+			margin-left: 220px;
+			margin-top: -60px;
+		}
+		
+		#path25{
+			margin-left: 220px;
+			margin-top: -60px;
+		}
+		
+		#path26{
+			margin-left: 190px;
+			margin-top: -30px;
+		}
+		
+		#path27{
+			margin-left: 160px;
+			margin-top: -30px;
+		}
+		
+		#path28{
+			margin-left: 160px;
+			margin-top: -60px;
+		}
+		
+		#path29{
+			margin-left: 160px;
+			margin-top: -60px;
+		}
+		
+		#path30{
+			margin-left: 190px;
+			margin-top: -30px;
+		}
+		
+		#path31{
+			margin-left: 310px;
+			margin-top: 150px;
+		}
+		
+		#path32{
+			margin-left: 310px;
+			margin-top: 0px;
+		}
+		
+		#path33{
+			margin-left: 310px;
+			margin-top: 0px;
+		}
+		
+		#path34{
+			margin-left: 280px;
+			margin-top: -30px;
+		}
+		
+		#path35{
+			margin-left: 340px;
+			margin-top: -30px;
+		}
+		
+		#path36{
+			margin-left: 370px;
+			margin-top: -30px;
+		}
+		
+		#path37{
+			margin-left: 370px;
+			margin-top: -60px;
+		}
+		
+		#path38{
+			margin-left: 370px;
+			margin-top: -60px;
+		}
+		
+		#path39{
+			margin-left: 370px;
+			margin-top: -60px;
+		}
+		
+		#path40{
+			margin-left: 310px;
+			margin-top: -60px;
+		}
+		
+		#path41{
+			margin-left: 310px;
+			margin-top: -60px;
+		}
+		
+		#path42{
+			margin-left: 310px;
+			margin-top: -60px;
+		}
+		
+		#path43{
+			margin-left: 340px;
+			margin-top: -30px;
+		}
+		
+		#path44{
+			margin-left: 370px;
+			margin-top: -30px;
+		}
+		
+		#path45{
+			margin-left: 370px;
+			margin-top: 0px;
+		}
+		
+		#path46{
+			margin-left: 280px;
+			margin-top: -60px;
+		}
+		
+		#path47{
+			margin-left: 280px;
+			margin-top: -60px;
+		}
+		
+		#path48{
+			margin-left: 280px;
+			margin-top: -60px;
+		}
+		
+		#path49{
+			margin-left: 310px;
+			margin-top: -30px;
+		}
+		
+		#path50{
+			margin-left: 340px;
+			margin-top: -30px;
+		}
+		
+		#path51{
+			margin-left: 370px;
+			margin-top: -30px;
+			border-top-right-radius: 30px;
+			border-bottom-right-radius: 30px;
+		}
+		
+	</style>
+	
+	
+</head>
+
+<body>
+	
+<!--	Game board-->
+	
+	<section id="board">
+		
+		
+		
+		<!-- Player -->
+		
+		
+		
+		<!-- Paths -->
+	
+		<div class = "Path" id = "path1"></div>
+		<div class = "Path" id = "path2"><div id = "player" draggable = "true"></div></div>
+		<div class = "Path" id = "path3"></div>
+		<div class = "Path" id = "path4"></div>
+		<div class = "Path" id = "path5"></div>
+		<div class = "Path" id = "path6"></div>
+		<div class = "Path" id = "path7"></div>
+		<div class = "Path" id = "path8"></div>
+		<div class = "Path" id = "path9"></div>
+		<div class = "Path" id = "path10"></div>
+		<div class = "Path" id = "path11"></div>
+		<div class = "Path" id = "path12"></div>
+		<div class = "Path" id = "path13"></div>
+		<div class = "Path" id = "path14"></div>
+		<div class = "Path" id = "path15"></div>
+		<div class = "Path" id = "path16"></div>
+		<div class = "Path" id = "path17"></div>
+		<div class = "Path" id = "path18"></div>
+		<div class = "Path" id = "path19"></div>
+		<div class = "Path" id = "path20"></div>
+		<div class = "Path" id = "path21"></div>
+		<div class = "Path" id = "path22"></div>
+		<div class = "Path" id = "path23"></div>
+		<div class = "Path" id = "path24"></div>
+		<div class = "Path" id = "path25"></div>
+		<div class = "Path" id = "path26"></div>
+		<div class = "Path" id = "path27"></div>
+		<div class = "Path" id = "path28"></div>
+		<div class = "Path" id = "path29"></div>
+		<div class = "Path" id = "path30"></div>
+		<div class = "Path" id = "path31"></div>
+		<div class = "Path" id = "path32"></div>
+		<div class = "Path" id = "path33"></div>
+		<div class = "Path" id = "path34"></div>
+		<div class = "Path" id = "path35"></div>
+		<div class = "Path" id = "path36"></div>
+		<div class = "Path" id = "path37"></div>
+		<div class = "Path" id = "path38"></div>
+		<div class = "Path" id = "path39"></div>
+		<div class = "Path" id = "path40"></div>
+		<div class = "Path" id = "path41"></div>
+		<div class = "Path" id = "path42"></div>
+		<div class = "Path" id = "path43"></div>
+		<div class = "Path" id = "path44"></div>
+		<div class = "Path" id = "path45"></div>
+		<div class = "Path" id = "path46"></div>
+		<div class = "Path" id = "path47"></div>
+		<div class = "Path" id = "path48"></div>
+		<div class = "Path" id = "path49"></div>
+		<div class = "Path" id = "path50"></div>
+		<div class = "Path" id = "path51"></div>
+		
+	
+		<h2></h2>
+		<h1></h1>
+	
+	</section>
+	
+	
+</body>
+	
+	
+	<script>
+	
+	
+		var player; 
+		var stepCount = 0;
+		
+		var steps = document.querySelector('h2');
+		steps.textContent = stepCount + ' steps';
+		
+		
+		document.ondragstart = function(e){
+			player = e.target;
+			
+		}
+		
+
+		document.ondragenter = function(e){
+			if (e.target.className === "Path") {
+				
+				
+				
+				
+				if((e.target.getAttribute('id') === 'path7') && (player.parentNode.getAttribute('id') === 'path4')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path4') && (player.parentNode.getAttribute('id') === 'path7')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path13') && (player.parentNode.getAttribute('id') === 'path16')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path16') && (player.parentNode.getAttribute('id') === 'path13')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path15') && (player.parentNode.getAttribute('id') === 'path17')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path17') && (player.parentNode.getAttribute('id') === 'path15')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path19') && (player.parentNode.getAttribute('id') === 'path31')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path31') && (player.parentNode.getAttribute('id') === 'path19')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path33') && (player.parentNode.getAttribute('id') === 'path35')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path35') && (player.parentNode.getAttribute('id') === 'path33')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path21') && (player.parentNode.getAttribute('id') === 'path40')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path40') && (player.parentNode.getAttribute('id') === 'path21')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path42') && (player.parentNode.getAttribute('id') === 'path46')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				if((e.target.getAttribute('id') === 'path46') && (player.parentNode.getAttribute('id') === 'path42')){
+				   player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				   }
+				
+				
+				
+				
+				if(e.target === player.parentNode.nextSibling.nextSibling || e.target === player.parentNode.previousSibling.previousSibling){
+					player.parentNode.removeChild(player);
+				    e.target.appendChild(player);
+					stepCount++;
+					steps.textContent = stepCount + ' steps';
+				}
+				
+				
+				if(e.target.getAttribute('id') === 'path51'){
+					var congrad = document.querySelector('h1');
+					player.style.backgroundColor = 'coral';
+					congrad.textContent = 'Congradulation!';
+				}
+				
+				
+			}
+		}
+		
+		
+
+		
+	
+	
+	</script>
+	
+	
+	
+	
+</html>

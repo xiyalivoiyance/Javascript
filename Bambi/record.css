@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+html{
+	margin: 0px;
+	overflow: hidden;
+}
+
+a{
+	font-family: Helvetica Neue Bold, sans-serif;
+	color: #F7A761;
+	text-decoration: none;
+}
+
+
+body{
+	background-color: #F4D9D9;
+}
+
+
+h1{
+	font-family: Helvetica Neue Bold, sans-serif;
+	color: #F7A761;
+	font-size: 170px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+h2{
+	font-family: Helvetica Neue Bold, sans-serif;
+	color: #F7A761;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	margin-top: 50%;
+}
+
+h3{
+	font-family: Helvetica Neue Bold, sans-serif;
+	color: #F7A761;
+	margin-top: 5%;
+	margin-left: 40px;
+}
+
+#reset{
+	text-decoration: underline;
+	margin-top: -5%;
+}
